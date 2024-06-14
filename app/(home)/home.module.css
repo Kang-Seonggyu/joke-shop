@@ -1,0 +1,36 @@
+.mainCarousel {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.listItem {
+  position: relative;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  line-height: 100vh;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  cursor: grab;
+}
+.listItem > span {
+  position: absolute;
+  padding: 0px 20px;
+  right: 4%;
+  bottom: 40px;
+  width: fit-content;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 8px;
+  background-color: rgba(194, 194, 194, 0.6);
+  transition: all 300ms ease-in-out;
+}
+.listItem > span:hover {
+  background-color: rgb(194, 194, 194);
+}

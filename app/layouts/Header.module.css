@@ -1,0 +1,115 @@
+.container {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.topBar {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.menus {
+  padding: 15px 4%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 14px;
+}
+
+.menus .nav {
+  order: 1;
+}
+.menus .logo {
+  order: 2;
+}
+.menus .myInfo {
+  order: 3;
+}
+.menus .nav > ul,
+.menus .myInfo > ul {
+  display: flex;
+  line-height: 30px;
+  gap: 1.5rem;
+}
+.menus li {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.menus .logo > img {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+}
+.menus button {
+  display: none;
+}
+
+@media screen and (max-width: 1280px) {
+  /** 타블렛 가로, 노트북 */
+}
+
+@media screen and (max-width: 1024px) {
+  /** 타블렛 가로, 노트북 */
+  .menus .nav {
+    order: 2;
+  }
+  .menus .logo {
+    order: 1;
+    width: 100%;
+    text-align: right;
+  }
+  .menus .myInfo {
+    order: 3;
+  }
+  .menus .logo > img {
+    position: static;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /** 모바일 가로, 타블렛 세로 */
+  .menus .nav {
+    order: 1;
+  }
+  .menus .logo {
+    order: 2;
+    width: fit-content;
+  }
+  .menus .myInfo {
+    order: 3;
+  }
+  .menus .nav > ul {
+    display: none;
+  }
+  .menus .myInfo > ul {
+    display: none;
+  }
+  .menus button {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /** 모바일 세로 */
+  .menus .nav {
+    order: 2;
+  }
+  .menus .logo {
+    order: 1;
+  }
+  .menus .myInfo {
+    order: 3;
+  }
+  .menus .logo {
+    order: 1;
+    width: 100%;
+    text-align: right;
+  }
+}
