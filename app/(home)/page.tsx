@@ -29,8 +29,26 @@ export default function Home() {
           })}
         </MyCarousel>
       </div>
-      <div style={{ height: '6rem', lineHeight: '6rem' }}>다른것1</div>
-      <div style={{ height: '6rem', lineHeight: '6rem' }}>다른것2</div>
+      <div
+        style={{
+          padding: '1rem',
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '1rem',
+          justifyContent: 'space-around',
+          height: '75vh',
+        }}
+      >
+        {[0, 1, 2, 3, 4, 5].map((img) => (
+          <div
+            style={{ position: 'relative', width: '46%' }}
+            key={`img_${img}`}
+          >
+            <Image src={'https://placehold.co/600x400'} alt="placehold" fill />
+          </div>
+        ))}
+      </div>
+      <div style={{ height: '6rem', lineHeight: '6rem' }}>Contents...</div>
     </main>
   );
 }

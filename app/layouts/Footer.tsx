@@ -1,20 +1,51 @@
+import Image from 'next/image';
 import styles from './Footer.module.css';
 
 export default function Footer() {
+  const sns = [
+    {
+      to: 'https://www.instagram.com',
+      path: '/icons/instagram.svg',
+      title: 'INSTAGRAM',
+    },
+    {
+      to: 'https://www.kakaocorp.com',
+      path: '/icons/kakaotalk.svg',
+      title: 'KAKAOTALK',
+    },
+    {
+      to: 'https://www.facebook.com',
+      path: '/icons/facebook.svg',
+      title: 'FACEBOOK',
+    },
+    { to: 'https://line.me/ko', path: '/icons/naver_line.svg', title: 'LINE' },
+  ];
   return (
     <div className={styles.container}>
       <div className={styles.anchors}>
         <ul>
-          <li>ABOUT</li>
-          <li>TERMS</li>
-          <li>POLICY</li>
-          <li>HELP</li>
+          <li>
+            <a href="#">ABOUT</a>
+          </li>
+          <li>
+            <a href="#">TERMS</a>
+          </li>
+          <li>
+            <a href="#">POLICY</a>
+          </li>
+          <li>
+            <a href="#">HELP</a>
+          </li>
         </ul>
-        <ul>
-          <li>INSTAGRAM</li>
-          <li>KAKAOTALK</li>
-          <li>FACEBOOK</li>
-          <li>LINE</li>
+        <ul className={styles.social}>
+          {sns.map((data) => (
+            <li key={data.title}>
+              <a href={data.to} target="_blank">
+                <Image src={data.path} width={20} height={20} alt="sns" />
+                {data.title}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
       <ul className={styles.contact}>

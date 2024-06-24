@@ -28,10 +28,18 @@ export default function Header() {
       <div className={styles.menus}>
         <nav className={styles.nav}>
           <ul>
-            <li>SHOP</li>
-            <li>COURSE</li>
-            <li>COMMUNITY</li>
-            <li>PHOTOS</li>
+            <li>
+              <a href="#">SHOP</a>
+            </li>
+            <li>
+              <a href="#">COURSE</a>
+            </li>
+            <li>
+              <a href="#">COMMUNITY</a>
+            </li>
+            <li>
+              <a href="#">PHOTOS</a>
+            </li>
           </ul>
           <button>menu</button>
         </nav>
@@ -40,9 +48,15 @@ export default function Header() {
         </div>
         <div className={styles.myInfo}>
           <ul>
-            <li>mypage</li>
-            <li>cart</li>
-            <li>logout</li>
+            <li>
+              <a href="#">mypage</a>
+            </li>
+            <li>
+              <a href="#">cart</a>
+            </li>
+            <li>
+              <a href="#">logout</a>
+            </li>
           </ul>
           <button>myinfo</button>
         </div>

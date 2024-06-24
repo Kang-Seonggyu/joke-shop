@@ -21,6 +21,7 @@ export default function MyCarousel({ children }: Props) {
       infiniteLoop
       interval={3000}
       transitionTime={1000}
+      showThumbs={false}
       showStatus={false}
       showArrows={false}
       emulateTouch

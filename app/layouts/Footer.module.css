@@ -18,8 +18,14 @@
   flex-direction: column;
   gap: 0.5rem;
 }
-
+.anchors ul li {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  height: 25px;
+}
 .contact {
+  margin-top: 12px;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
